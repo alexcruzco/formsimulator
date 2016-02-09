@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Form Simulator</title>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+    <script src="libraries/jquery-1.9.0.min.js"></script>
+    <script src="libraries/popup.js"></script>
+    <script src="libraries/session.js"></script>
+    <link href="styles/formsimulator.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container">
+  	<div class="loading">
+    	<div class="loading_icon">&nbsp;</div>
+    </div>
+  	<div class="languages">
+    	<a  title="Espa&ntilde;ol" id="es_language_link" href="#"><img width="15" src="images/es.png"></a>
+    	<a  title="English" id="en_language_link" href="#"><img width="15" src="images/en.png"></a>
+    </div>
+  <input type="button" id="start_recording_button" value="start_recording" >
+  <input type="button" id="stop_recording_button"  value="stop_recording">
+  <input type="button" id="simulate_button"  value="simule_form">
+  <input type="button" id="stop_simulation_button"  value="stop_simulation">
+  <input type="button" id="save_simulation_button"  value="save_simulation">
+  <input type="button" id="load_simulation_button"  value="load_simulation">
+  <input type="button" id="save_gray_wolf_button"   value="save_gray_wolf">
+  </div>
+  <div class="open_simulation_bg">&nbsp;</div>
+  <div class="open_simulation_window_bg">
+      <div class="open_simulation_window">
+      		<div class="entry">
+            	<label for="select_simulation">select_simulation:</label>
+            </div>
+      		<div class="entry">
+                <select name="select_simulation" id="select_simulation"></select>
+            </div>
+      		<div class="entry">
+                <input id="load_simulation_button_do" type="button" value="load_simulation" >
+            </div>
+      </div>
+      </div>
+  <div class="save_simulation_bg">&nbsp;</div>
+  <div class="save_simulation_window_bg">
+      <div class="save_simulation_window">
+      		<div class="entry">
+            	<label for="name_simulation">name_simulation:</label>
+            </div>
+      		<div class="entry">
+                <input type="text" name="name_simulation" id="name_simulation" />
+            </div>
+      		<div class="entry">
+                <input id="save_simulation_button_do" type="button" value="save_simulation" >
+            </div>
+      </div>
+      </div>
+  <div class="simulation_options_bg">&nbsp;</div>
+  <div class="simulation_options_window_bg">
+      <div class="simulation_options_window">
+      		<div class="entry">
+            	<label for="repeat_simulation">repeat_simulation:</label>
+            </div>
+      		<div class="entry">
+            	<select name="repeat_simulation" id="repeat_simulation">
+                	<option value="1">yes</option>
+                	<option value="0" selected>no</option>
+                </select>
+            </div>
+      		<div class="entry">
+            	<label for="repeat_times_simulation">repeat_times_simulation:</label>
+            </div>
+      		<div class="entry">
+                <input type="text" name="repeat_times_simulation" id="repeat_times_simulation" />
+            </div>
+      		<div class="entry">
+                <input id="simulate_button_do" type="button" value="simule_form" >
+            </div>
+      </div>
+      </div>
+  <div class="alert_bg">&nbsp;</div>
+  <div class="alert_window_bg">
+      <div class="alert_window">
+      		<div class="entry">
+            	<label>message</label>
+            </div>
+      		<div class="entry">
+                <input id="alert_ok" type="button" value="alert_ok" >
+            </div>
+      </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "addons": {
+    "formsimulator@naturalweb.rocks": {
+      "updates": [
+        { "version": "4.0",
+          "update_link": "http://naturalweb.rocks/extensions/formsimulator/updates/FormSimulator_4.0.xpi" 
+		}
+      ]
+    }
+  }
+}
